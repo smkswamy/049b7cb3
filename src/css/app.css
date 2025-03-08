@@ -19,7 +19,34 @@
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, .9);
 }
 
-#app .container-view {
-  padding: 20px;
+.container {
 }
 
+.container-view {
+  margin-top: 20px;
+  max-height: 560px;
+  overflow-y: auto; /* Allow vertical scroll */
+  overflow-x: auto; /* Allow horizontal scroll */
+}
+
+/* Hide scroll bars */
+.container-view::-webkit-scrollbar {
+  display: none;
+}
+
+.container-view {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.MuiPaper-root {
+  transition: transform 0.3s ease-in-out;
+}
+
+.MuiPaper-root:hover {
+  transform: scale(1.02);
+}
+
+.MuiButton-root {
+  color: black;
+}
